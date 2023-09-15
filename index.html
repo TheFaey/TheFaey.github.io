@@ -3,21 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Discord Widget</title>
-</head>
-<body>
-    <iframe
-        src="https://discord.com/widget?id=1152015229157384264&theme=dark"
-        width="350"
-        height="500"
-        allowtransparency="true"
-        frameborder="0"
-        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-    ></iframe>
-</body>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Portfolio</title>
     <style>
         /* Reset some default styles */
@@ -94,6 +79,24 @@
         .cta-button:hover {
             background-color: #0066AA;
         }
+
+        /* Style the sidebar */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px; /* Adjust the width as needed */
+            height: 100%; /* Make it cover the full height of the viewport */
+        }
+
+        /* Style the Discord widget */
+        .discord-widget {
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -127,6 +130,19 @@
             <p>Description of your third project goes here.</p>
             <a href="#" class="cta-button">View Details</a>
         </div>
+    </div>
+
+    <div class="sidebar">
+        <!-- Place your Discord widget here -->
+        <iframe
+            src="https://discord.com/widget?id=1152015229157384264&theme=dark"
+            width="220" <!-- Adjust the width as needed -->
+            height="500"
+            allowtransparency="true"
+            frameborder="0"
+            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
+            class="discord-widget"
+        ></iframe>
     </div>
 </body>
 </html>
