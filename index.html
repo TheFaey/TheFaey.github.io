@@ -80,16 +80,32 @@
             background-color: #0066AA;
         }
 
+        /* Style the circular button for the sidebar */
+        .sidebar-button {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background-color: #0088CC;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
         /* Style the sidebar */
         .sidebar {
             background-color: #333;
             color: white;
-            padding: 20px;
+            width: 0;
+            height: 100%;
             position: fixed;
             top: 0;
-            left: 0;
-            width: 250px; /* Adjust the width as needed */
-            height: 100%; /* Make it cover the full height of the viewport */
+            right: -250px; /* Initially hidden */
+            transition: right 0.3s;
         }
 
         /* Style the Discord widget */
@@ -97,6 +113,10 @@
             margin-top: 20px;
         }
 
+        /* Show the sidebar when hovering over the button */
+        .sidebar-button:hover + .sidebar {
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -132,6 +152,11 @@
         </div>
     </div>
 
+    <!-- Circular button to show the sidebar -->
+    <div class="sidebar-button">
+        <div>&#9654;</div> <!-- Unicode right-pointing triangle symbol -->
+    </div>
+
     <div class="sidebar">
         <!-- Place your Discord widget here -->
         <iframe
@@ -144,5 +169,15 @@
             class="discord-widget"
         ></iframe>
     </div>
+    
+    <script>
+        // JavaScript to toggle the sidebar when the button is clicked
+        const sidebarButton = document.querySelector('.sidebar-button');
+        const sidebar = document.querySelector('.sidebar');
+        
+        sidebarButton.addEventListener('click', () => {
+            sidebar.style.right = (sidebar.style.right === '0px' || sidebar.style.right === '') ? '-250px' : '0px';
+        });
+    </script>
 </body>
 </html>
