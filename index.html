@@ -1,182 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Portfolio</title>
+    <title>My Website</title>
     <style>
-        /* Reset some default styles */
-        body, h1, p {
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Set the background color to light blue */
+        /* Add your CSS styles here */
         body {
-            background-color: #B3E0FF;
             font-family: Arial, sans-serif;
         }
 
-        /* Style the header */
-        header {
-            background-color: #0088CC;
+        .button {
+            background-color: #008CBA; /* Blue */
+            border: none;
             color: white;
+            padding: 15px 32px;
             text-align: center;
-            padding: 40px 0;
-        }
-
-        /* Style the navigation bar */
-        nav {
-            background-color: #0088CC;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav a {
             text-decoration: none;
-            color: white;
-            font-weight: bold;
-        }
-
-        /* Style the portfolio section */
-        .portfolio {
-            padding: 40px;
-            text-align: center;
-        }
-
-        .project {
-            background-color: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 5px;
-        }
-
-        .project h3 {
-            color: #0088CC;
-        }
-
-        /* Style the call-to-action button */
-        .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #0088CC;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .cta-button:hover {
-            background-color: #0066AA;
-        }
-
-        /* Style the circular button for the sidebar */
-        .sidebar-button {
-            position: fixed;
-            right: 20px;
-            top: 20px;
-            background-color: #0088CC;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            font-size: 16px;
+            margin: 4px 2px;
             cursor: pointer;
-        }
-
-        /* Style the sidebar */
-        .sidebar {
-            background-color: #333;
-            color: white;
-            width: 0;
-            height: 100%;
-            position: fixed;
-            top: 0;
-            right: -250px; /* Initially hidden */
-            transition: right 0.3s;
-        }
-
-        /* Style the Discord widget */
-        .discord-widget {
-            margin-top: 20px;
-        }
-
-        /* Show the sidebar when hovering over the button */
-        .sidebar-button:hover + .sidebar {
-            right: 0;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Showcasing My Work</p>
-    </header>
+    <h1>Welcome to My Website</h1>
+    <button class="button" id="myButton">Click me</button>
 
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">About Me</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="portfolio">
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Description of your first project goes here.</p>
-            <a href="#" class="cta-button">View Details</a>
-        </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Description of your second project goes here.</p>
-            <a href="#" class="cta-button">View Details</a>
-        </div>
-        <div class="project">
-            <h3>Project 3</h3>
-            <p>Description of your third project goes here.</p>
-            <a href="#" class="cta-button">View Details</a>
-        </div>
-    </div>
-
-    <!-- Circular button to show the sidebar -->
-    <div class="sidebar-button">
-        <div>&#9654;</div> <!-- Unicode right-pointing triangle symbol -->
-    </div>
-
-    <div class="sidebar">
-        <!-- Place your Discord widget here -->
-        <iframe
-            src="https://discord.com/widget?id=1152015229157384264&theme=dark"
-            width="220" <!-- Adjust the width as needed -->
-            height="500"
-            allowtransparency="true"
-            frameborder="0"
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"
-            class="discord-widget"
-        ></iframe>
-    </div>
-    
     <script>
-        // JavaScript to toggle the sidebar when the button is clicked
-        const sidebarButton = document.querySelector('.sidebar-button');
-        const sidebar = document.querySelector('.sidebar');
-        
-        sidebarButton.addEventListener('click', () => {
-            sidebar.style.right = (sidebar.style.right === '0px' || sidebar.style.right === '') ? '-250px' : '0px';
+        // Add your JavaScript here
+        document.getElementById('myButton').addEventListener('click', function() {
+            alert('Button clicked!');
         });
     </script>
 </body>
