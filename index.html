@@ -22,23 +22,24 @@
             cursor: pointer;
         }
 
-        #video-background {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            z-index: -1;
-        }
-    </style>
-</head>
-<body>
-    <video id="video-background" autoplay loop muted>
-        <source src="" type="video/mp4">
-        <!-- Add additional video formats here if needed -->
-    </video>
+                #video-background {
+                    position: fixed;
+                    right: 0;
+                    bottom: 0;
+                    min-width: 100%;
+                    min-height: 100%;
+                    width: auto;
+                    height: auto;
+                    z-index: -1;
+                    filter: blur(5px); /* Add the blur effect */
+                }
+            </style>
+        </head>
+        <body>
+            <video id="video-background" autoplay loop muted>
+                <source src="Cherry_blossom.mp4" type="video/mp4">
+                <!-- Add additional video formats here if needed -->
+            </video>
 
     <h1>Welcome to My Website</h1>
     <button class="button" id="myButton">Click me</button>
@@ -46,7 +47,8 @@
     <script>
         // Add your JavaScript here
         document.getElementById('myButton').addEventListener('click', function() {
-            alert('Button clicked!');
+            var sideMenu = document.getElementById('sideMenu');
+            sideMenu.classList.toggle('open');
         });
     </script>
 </body>
